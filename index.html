@@ -7,6 +7,13 @@
 <meta name="description" content="A multicultural creative space in Flushing, New York — wagashi, crystals, specialty coffee &amp; matcha, hands-on craft workshops, and an intimate venue for gatherings.">
 <meta property="og:title" content="Oshiart Studio — Many traditions, one long table.">
 <meta property="og:description" content="Craft workshops, tea, and gatherings in downtown Flushing, NY.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oshiart-studio.vercel.app/">
+<meta property="og:image" content="https://oshiart-studio.vercel.app/images/04_shop_wagashi-assortment-tray.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F1E7">
+<link rel="canonical" href="https://oshiart-studio.vercel.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='13' fill='%23BE3A2B'/%3E%3Crect x='11' y='11' width='42' height='42' rx='8' fill='none' stroke='%23F6F1E7' stroke-width='4' opacity='.45'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
@@ -118,19 +125,22 @@ h2{font-size:clamp(1.9rem,3.6vw,2.75rem);max-width:22ch}
 /* ============ PHOTOS ============ */
 .manifesto-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center;position:relative;z-index:1}
 .manifesto-photo{position:relative;margin:0}
-.manifesto-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 15%;border-radius:16px;border:1px solid var(--hairline);box-shadow:var(--shadow)}
+.manifesto-photo img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:16px;border:1px solid var(--hairline);box-shadow:var(--shadow)}
 .photo-chop{width:56px;height:56px;font-size:14px;position:absolute;right:26px;bottom:-16px;border-radius:9px}
 .photo-strip{display:grid;gap:22px;margin-top:56px}
-.photo-strip.cols-3{grid-template-columns:repeat(3,1fr)}
-.photo-strip.cols-2{grid-template-columns:repeat(2,1fr);max-width:860px}
+.photo-strip.cols-3{grid-template-columns:3fr 4fr 4fr}
+.photo-strip.cols-2{grid-template-columns:2fr 1fr;max-width:860px}
 .photo-strip figure{margin:0}
 .photo-strip img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--hairline)}
+.photo-strip .r1x1 img{aspect-ratio:1/1}
+.photo-strip .r3x2 img{aspect-ratio:3/2}
+.photo-strip .r3x4 img{aspect-ratio:3/4}
 .photo-strip figcaption{display:flex;align-items:center;gap:9px;margin-top:11px;font:700 11.5px 'Karla',sans-serif;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
 .photo-strip figcaption::before{content:"";width:7px;height:7px;background:var(--seal);border-radius:2px;transform:rotate(-8deg);flex:none}
 .events .photo-strip img{border-color:rgba(246,241,231,.28)}
 .events .photo-strip figcaption{color:rgba(246,241,231,.75)}
 @media (max-width:900px){.manifesto-grid{grid-template-columns:1fr;gap:44px}.manifesto-photo{max-width:440px;margin:0 auto}}
-@media (max-width:720px){.photo-strip.cols-3,.photo-strip.cols-2{grid-template-columns:1fr}}
+@media (max-width:720px){.photo-strip.cols-3,.photo-strip.cols-2{grid-template-columns:1fr}.photo-strip .r3x4 img{aspect-ratio:4/5}}
 
 /* ============ NAV ============ */
 .nav{
@@ -334,6 +344,7 @@ footer{background:#1B2B3D;color:rgba(246,241,231,.78);padding:64px 0 40px;font-s
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Oshiart Studio",
+  "url": "https://oshiart-studio.vercel.app/",
   "description": "A multicultural craft studio, café, and gathering space in Flushing, New York — wagashi, crystals, specialty coffee and matcha, hands-on cultural workshops, and an intimate event venue.",
   "address": {
     "@type": "PostalAddress",
@@ -351,9 +362,9 @@ footer{background:#1B2B3D;color:rgba(246,241,231,.78);padding:64px 0 40px;font-s
   "telephone": "+1-929-503-7880",
   "hasMap": "https://maps.google.com/?q=131-04+40th+Rd,+Flushing,+NY+11354",
   "image": [
-    "images/01_hero_artisan-at-wagashi-station.jpg",
-    "images/02_shop_maple-leaf-wagashi.jpg",
-    "images/11_events_set-table-hydrangeas.jpg"
+    "https://oshiart-studio.vercel.app/images/01_hero_artisan-at-wagashi-station.jpg",
+    "https://oshiart-studio.vercel.app/images/02_shop_maple-leaf-wagashi.jpg",
+    "https://oshiart-studio.vercel.app/images/11_events_set-table-hydrangeas.jpg"
   ]
 }
 </script>
@@ -565,7 +576,7 @@ footer{background:#1B2B3D;color:rgba(246,241,231,.78);padding:64px 0 40px;font-s
       </article>
     </div>
     <div class="photo-strip cols-3 reveal">
-      <figure>
+      <figure class="r1x1">
         <img src="images/02_shop_maple-leaf-wagashi.jpg" width="2000" height="2000" loading="lazy" decoding="async" alt="Handmade nerikiri wagashi shaped like a red maple leaf on a ceramic plate">
         <figcaption>Momiji — autumn nerikiri</figcaption>
       </figure>
@@ -592,11 +603,11 @@ footer{background:#1B2B3D;color:rgba(246,241,231,.78);padding:64px 0 40px;font-s
     </div>
 
     <div class="photo-strip cols-2 reveal">
-      <figure>
+      <figure class="r3x2">
         <img src="images/06_workshop_camellia-in-hands.jpg" width="2000" height="1331" loading="lazy" decoding="async" alt="Hands in embroidered sleeves shaping a red camellia wagashi">
         <figcaption>From a wagashi class</figcaption>
       </figure>
-      <figure>
+      <figure class="r3x4">
         <img src="images/10_workshop_floral-arranging.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Hands arranging pink and white flowers during a floral workshop">
         <figcaption>From a floral session</figcaption>
       </figure>
@@ -680,11 +691,11 @@ footer{background:#1B2B3D;color:rgba(246,241,231,.78);padding:64px 0 40px;font-s
       <p class="defn"><span class="kanji" lang="zh">雅集</span> <i>yǎjí</i> — "the elegant gathering": the old word for friends meeting over tea, art, and good conversation. Our cozy, well-designed room is yours for exactly that.</p>
     </div>
     <div class="photo-strip cols-2 reveal">
-      <figure>
+      <figure class="r3x2">
         <img src="images/11_events_set-table-hydrangeas.jpg" width="2000" height="1331" loading="lazy" decoding="async" alt="Workshop table set with tools, hydrangeas, and place settings ready for guests">
         <figcaption>The room, set for guests</figcaption>
       </figure>
-      <figure>
+      <figure class="r3x4">
         <img src="images/12_events_window-gathering-yaji.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Guests in traditional dress gathered around a decorated table by the window">
         <figcaption>An evening yaji</figcaption>
       </figure>
